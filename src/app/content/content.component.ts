@@ -23,6 +23,12 @@ export class ContentComponent implements OnInit {
   }
 
   buildContent() {
+
+
+    if(this.page==='news'){
+
+    }
+
     this.contents = [];
     this.contents.push(...this.core[this.page]);
     // console.log(' build content ');
