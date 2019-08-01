@@ -1,78 +1,39 @@
 @import '../assets/styles/vars';
 
-body {
-  background-color: $bgColor;
-  font:100% $fontStack;
-  color:$fontColor;
-}
-
-a:link{
-  color: $linkColor;
-}
-
-a:hover{
-  color: $hoverColor;
-}
-
-a:active{
-  color: $actColor;
-}
-
-a:visited{
-  color: $visitColor;
-}
-//
-//table{
-//  width: $contentWidth;
-//  padding: 10px;
-//  margin: 10px;
-//  @media #{$xlarge} {
-//    width:$contentWidthXL;
-//  }
-//  @media #{$large} {
-//    width:$contentWidthLG;
-//  }
-//  @media #{$medium} {
-//    width:$contentWidthMD;
-//    padding: 5px;
-//    margin: 5px;
-//  }
-//  @media #{$small} {
-//    width:$contentWidthSM;
-//    padding: 5px;
-//    margin: 5px;
-//  }
-//
+//.body {
+//  background-color: $bgColor;
+//  font:100% $fontStack;
+//  color:$fontColor;
 //}
 
 
 // MAIN IMAGE ANIMATION & VIDEO Display
 .page{
   position: fixed;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
   background-color: $bgColor;
   font:100% $fontStack;
   color:$fontColor;
   resize: both;
 }
 .contentContainer {
-  opacity: 1;
-  //animation-name: fadeUp;
-  //animation-delay: 5s;
-  //animation-duration: 500ms;
-  //animation-fill-mode: forwards;
-  //@keyframes fadeUp {
-  //  0% {
-  //    opacity: 0;
-  //  }
-  //
-  //  100% {
-  //    opacity: 1;
-  //  }
-  //}
+  opacity: 0;
+  animation-name: fadeUp;
+  animation-delay: 5s;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
 }
 
 

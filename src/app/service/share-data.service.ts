@@ -12,7 +12,11 @@ export class ShareDataService {
   currentCoreData = this.coreData.asObservable();
   private page = new BehaviorSubject<string>('');
   currentPage = this.page.asObservable();
-  constructor() {}
+  private newsIdx = new BehaviorSubject<number>(1);
+  currentNewsIdx = this.newsIdx.asObservable();
+
+  constructor() {
+  }
 
   setCoreData(data: Core) {
     this.coreData.next(data);
@@ -20,5 +24,9 @@ export class ShareDataService {
 
   setPageData(data: string) {
     this.page.next(data);
+  }
+
+  setNewsData(idx: number) {
+    this.newsIdx.next(idx);
   }
 }

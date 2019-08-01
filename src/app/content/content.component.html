@@ -7,21 +7,22 @@
 
 
   <div *ngSwitchCase="'text'" class="contentText"> {{item.content}} </div>
+  <div *ngSwitchCase="'news_link'" class="contentLink" (click)="updateNewPage(item.id)">{{item.content}}</div>
 
-  <div *ngSwitchCase="'link_name_short'" class="contentText"><a href="{{item.link}}" target="_blank">{{item.content}}</a></div>
+  <div *ngSwitchCase="'link_name_short'" class="contentLink"><a href="{{item.link}}" target="_blank">{{item.content}}</a></div>
 
 
-  <div *ngSwitchCase="'link_name'" class="contentText"><span class="contentLeft">{{item.content}}:</span><span class="contentRight"><a href="{{item.link}}" target="_blank">{{item.content}}</a></span></div>
+  <div *ngSwitchCase="'link_name'" class="contentText"><span class="contentLeft">{{item.content}}:</span><span class="contentRightLink"><a href="{{item.link}}" target="_blank">{{item.content}}</a></span></div>
 
-  <div *ngSwitchCase="'link'" class="contentText"><span class="contentLeft">{{item.content}}:</span><span class="contentRight"><a href="{{item.link}}" target="_blank">{{item.link}}</a></span></div>
+  <div *ngSwitchCase="'link'" class="contentText"><span class="contentLeft">{{item.content}}:</span><span class="contentRightLink"><a href="{{item.link}}" target="_blank">{{item.link}}</a></span></div>
 
-   <div *ngSwitchCase="'email'" class="contentText"><span class="contentLeft">{{item.content}}:</span><span class="contentRight"><a href="mailto: {{item.link}}" target="_blank">{{item.link}}</a></span></div>
+   <div *ngSwitchCase="'email'" class="contentText"><span class="contentLeft">{{item.content}}:</span><span class="contentRightLink"><a href="mailto: {{item.link}}" target="_blank">{{item.link}}</a></span></div>
 
   <div *ngSwitchCase="'break'"><br></div>
   <div *ngSwitchCase="'line'"><hr></div>
 
-
 </div>
+  <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
 
 </div>
 

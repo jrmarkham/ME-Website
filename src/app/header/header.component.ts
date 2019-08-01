@@ -13,9 +13,7 @@ export class HeaderComponent implements OnInit {
   constructor(private data: ShareDataService) {}
 
   ngOnInit() {
-    //this.core =
-
-      this.data.currentCoreData.subscribe(coreData => this.core = coreData);
+    this.data.currentCoreData.subscribe(coreData => this.core = coreData);
     console.log('header core ', this.core);
   }
 

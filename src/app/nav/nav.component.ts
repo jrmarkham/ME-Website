@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Core} from '../models/core';
 import {ShareDataService} from '../service/share-data.service';
 
@@ -9,16 +9,19 @@ import {ShareDataService} from '../service/share-data.service';
 })
 export class NavComponent implements OnInit {
   core: Core;
+  NEWS_COUNT = 'news_count';
   constructor(private data: ShareDataService) {}
 
   ngOnInit() {
-   // this.core =
-      this.data.currentCoreData.subscribe(coreData => this.core = coreData);
+    this.data.currentCoreData.subscribe(coreData => this.core = coreData);
     console.log('header core ', this.core);
   }
 
   updatePage(pageData: string) {
-    console.log('new page ', pageData );
+    console.log('new page ', pageData);
+    if ('news' === pageData) {
+      this.data.setNewsData(this.core[pageData][this.NEWS_COUNT] - 1);
+    }
     this.data.setPageData(pageData);
   }
 }
