@@ -1,20 +1,22 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Core} from '../models/core';
+import {ShareDataService} from '../service/share-data.service';
 
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['../app.component.scss', './header.component.scss']
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  // coreData;
-  //
-  // constructor(private firebaseService: PhpService) {
-  // }
+  core: Core;
+  constructor(private data: ShareDataService) {}
 
-  ngOnInit(): void {
-    // this.coreData = this.firebaseService.getCoreData();
-    // console.log('get data');
-    // console.log(this.coreData);
+  ngOnInit() {
+    //this.core =
+
+      this.data.currentCoreData.subscribe(coreData => this.core = coreData);
+    console.log('header core ', this.core);
   }
+
 }

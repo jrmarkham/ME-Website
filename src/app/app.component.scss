@@ -21,56 +21,30 @@ a:active{
 a:visited{
   color: $visitColor;
 }
+//
+//table{
+//  width: $contentWidth;
+//  padding: 10px;
+//  margin: 10px;
+//  @media #{$xlarge} {
+//    width:$contentWidthXL;
+//  }
+//  @media #{$large} {
+//    width:$contentWidthLG;
+//  }
+//  @media #{$medium} {
+//    width:$contentWidthMD;
+//    padding: 5px;
+//    margin: 5px;
+//  }
+//  @media #{$small} {
+//    width:$contentWidthSM;
+//    padding: 5px;
+//    margin: 5px;
+//  }
+//
+//}
 
-table{
-  width: $contentWidth;
-  padding: 10px;
-  margin: 10px;
-  @media #{$xlarge} {
-    width:$contentWidthXL;
-  }
-  @media #{$large} {
-    width:$contentWidthLG;
-  }
-  @media #{$medium} {
-    width:$contentWidthMD;
-    padding: 5px;
-    margin: 5px;
-  }
-  @media #{$small} {
-    width:$contentWidthSM;
-    padding: 5px;
-    margin: 5px;
-  }
-
-}
-
-
-.tdSpacer{
-  width:15px;
-  @media #{$large} {
-    width:10px;
-  }
-  @media #{$medium} {
-    width:5px;
-  }
-  @media #{$small} {
-    display: none;
-  }
-}
-
-.tdIcon{
-  width:150px;
-  @media #{$large} {
-    width: 100px;
-  }
-  @media #{$medium} {
-    width:50px;
-  }
-  @media #{$small} {
-    display: none;
-  }
-}
 
 // MAIN IMAGE ANIMATION & VIDEO Display
 .page{
@@ -83,82 +57,25 @@ table{
   font:100% $fontStack;
   color:$fontColor;
   resize: both;
-
+}
+.contentContainer {
+  opacity: 1;
+  //animation-name: fadeUp;
+  //animation-delay: 5s;
+  //animation-duration: 500ms;
+  //animation-fill-mode: forwards;
+  //@keyframes fadeUp {
+  //  0% {
+  //    opacity: 0;
+  //  }
+  //
+  //  100% {
+  //    opacity: 1;
+  //  }
+  //}
 }
 
 
-
-.meCon{
-  position: fixed;
-  top: 10%;
-  left: 50%;
-  height:100%;
-  text-align: left;
-  transform: translate(-50%);
-}
-.icon{
-  width:150px;
-  height: auto;
-}
-
-.header{
-  text-transform: uppercase;
-  font-size: $bigHeaderFontSize;
-  font-weight: $bigHeaderFontWeight;
-
-  @media #{$xlarge} {
-    font-size: $bigHeaderFontSizeXL;
-  }
-  @media #{$large} {
-    font-size: $bigHeaderFontSizeLG;
-  }
-  @media #{$medium} {
-    font-size: $bigHeaderFontSizeMD;
-  }
-  @media #{$small} {
-    font-size: $bigHeaderFontSizeMD;
-  }
-}
-
-.lineItem{
-  font-size: $menuFontSize;
-  font-weight: $menuFontWeight;
-  @media #{$xlarge} {
-    font-size: $menuFontSizeXL;
-  }
-  @media #{$large} {
-    font-size: $menuFontSizeLG;
-  }
-  @media #{$medium} {
-    font-size: $menuFontSizeMD;
-  }
-  @media #{$small} {
-    font-size: $menuFontSizeSM;
-  }
-}
-
-.menuItem{
-  font-size: $menuFontSize;
-  font-weight: $menuFontWeight;
-  cursor: pointer;
-  @media #{$xlarge} {
-    font-size: $menuFontSizeXL;
-  }
-  @media #{$large} {
-    font-size: $menuFontSizeLG;
-  }
-  @media #{$medium} {
-    font-size: $menuFontSizeMD;
-  }
-  @media #{$small} {
-    font-size: $menuFontSizeSM;
-  }  &:hover{
-  color:$hoverColor;
-}
-  &:visited{
-    color:$visitColor;
-  }
-}
 
 
 .newsLink{
@@ -183,74 +100,31 @@ table{
     color:$visitColor;
   }
 }
+//
+//div.content{
+//  overflow-y: scroll;
+//  height: 80%;
+//  width:$contentWidth;
+//  @media #{$xlarge} {
+//    width:$contentWidthXL;
+//  }
+//  @media #{$large} {
+//    width:$contentWidthLG;
+//  }
+//  @media #{$medium} {
+//    width:$contentWidthMD;
+//  }
+//  @media #{$small} {
+//    width:$contentWidthSM;
+//  }
+//  overflow-y: scroll;
+//}
 
-div.content{
-  overflow-y: scroll;
-  height: 80%;
-  width:$contentWidth;
-  @media #{$xlarge} {
-    width:$contentWidthXL;
-  }
-  @media #{$large} {
-    width:$contentWidthLG;
-  }
-  @media #{$medium} {
-    width:$contentWidthMD;
-  }
-  @media #{$small} {
-    width:$contentWidthSM;
-  }
-  overflow-y: scroll;
-}
-
-p .contentItem{
-  width: 100%;
-  font-size: $contentFontSize;
-  font-weight: $contentFontWeight;
-
-  @media #{$xlarge} {
-    font-size: $contentFontSizeXL;
-  }
-  @media #{$large} {
-    font-size: $contentFontSizeLG;
-  }
-  @media #{$medium} {
-    font-size: $contentFontSizeMD;
-  }
-  @media #{$small} {
-    font-size: $contentFontSizeSM;
-  }
-}
-
-@mixin linkText{
-  width: 100%;
-  font-size: $contentFontSize;
-  font-weight: $contentFontWeight;
-  cursor:pointer;
-
-  @media #{$xlarge} {
-    font-size: $contentFontSizeXL;
-  }
-  @media #{$large} {
-    font-size: $contentFontSizeLG;
-  }
-  @media #{$medium} {
-    font-size: $contentFontSizeMD;
-  }
-  @media #{$small} {
-    font-size: $contentFontSizeSM;
-  }  &:hover{
-  color:$hoverColor;
-}
-  &:visited{
-    color:$visitColor;
-  }
-}
-
-div .contentButtonItem{
-  @include linkText;
-}
-
-div .contentExternalItem{
-  @include linkText;
-}
+//
+//div .contentButtonItem{
+//  @include linkText;
+//}
+//
+//div .contentExternalItem{
+//  @include linkText;
+//}

@@ -1,0 +1,226 @@
+@import '../../assets/styles/vars';
+.content{
+  border: 3px solid purple;
+  position: fixed;
+  top: 220px;
+  margin-left: 20%;
+  margin-right:20%;
+  width: 60%;
+  align: center;
+  display: block;
+
+  overflow-y: scroll;
+  font-size: $contentFontSize;
+  font-weight: $contentFontWeight;
+
+  @media #{$xlarge} {
+    font-size: $contentFontSizeXL;
+  }
+  @media #{$large} {
+    font-size: $contentFontSizeLG;
+  }
+  @media #{$medium} {
+    margin-left: 10%;
+    margin-right:10%;
+    width: 80%;
+    font-size: $contentFontSizeMD;
+  }
+  @media #{$small} {
+    top: 95px;
+    margin-left: 5%;
+    margin-right:5%;
+    width: 90%;
+    font-size: $contentFontSizeSM;
+  }
+
+}
+
+
+.contentText{
+  position: relative;
+  border: 3px solid gray;
+  height: auto;
+  width: 100%;
+  text-align: left;
+}
+
+.contentLeft{
+  position: relative;
+  border: 3px solid yellow;
+  display: inline-block;
+  text-align:right;
+  left: 5%;
+  width: 30%;
+  height: auto;
+  @media #{$medium} {
+    width: 35%;
+  }
+  @media #{$small} {
+    left: 0%;
+    width: 40%;
+  }
+}
+
+.contentRight{
+  position: absolute;
+  border: 3px solid green;
+  display: inline-block;
+  right: 25%;
+   width: 30%;
+  text-align:left;
+  height: auto;
+  @media #{$medium} {
+    right: 10%;
+    width: 35%;
+  }
+  @media #{$small} {
+    right: 0%;
+    width: 40%;
+  }
+}
+
+//
+//.contentPara{
+//  top: inherit;
+//  width: 100%;
+//  font-size: $contentFontSize;
+//  font-weight: $contentFontWeight;
+//
+//  @media #{$xlarge} {
+//    font-size: $contentFontSizeXL;
+//  }
+//  @media #{$large} {
+//    font-size: $contentFontSizeLG;
+//  }
+//  @media #{$medium} {
+//    font-size: $contentFontSizeMD;
+//  }
+//  @media #{$small} {
+//    font-size: $contentFontSizeSM;
+//  }
+//}
+
+
+//contentItem{
+//  top: inherit;
+//  width: 100%;
+//  font-size: $contentFontSize;
+//  font-weight: $contentFontWeight;
+//
+//  @media #{$xlarge} {
+//    font-size: $contentFontSizeXL;
+//  }
+//  @media #{$large} {
+//    font-size: $contentFontSizeLG;
+//  }
+//  @media #{$medium} {
+//    font-size: $contentFontSizeMD;
+//  }
+//  @media #{$small} {
+//    font-size: $contentFontSizeSM;
+//  }
+//}
+//contentItem{
+//  top: inherit;
+//  width: 100%;
+//  font-size: $contentFontSize;
+//  font-weight: $contentFontWeight;
+//
+//  @media #{$xlarge} {
+//    font-size: $contentFontSizeXL;
+//  }
+//  @media #{$large} {
+//    font-size: $contentFontSizeLG;
+//  }
+//  @media #{$medium} {
+//    font-size: $contentFontSizeMD;
+//  }
+//  @media #{$small} {
+//    font-size: $contentFontSizeSM;
+//  }
+//}
+//contentItem{
+//  top: inherit;
+//  width: 100%;
+//  font-size: $contentFontSize;
+//  font-weight: $contentFontWeight;
+//
+//  @media #{$xlarge} {
+//    font-size: $contentFontSizeXL;
+//  }
+//  @media #{$large} {
+//    font-size: $contentFontSizeLG;
+//  }
+//  @media #{$medium} {
+//    font-size: $contentFontSizeMD;
+//  }
+//  @media #{$small} {
+//    font-size: $contentFontSizeSM;
+//  }
+//}
+//contentItem{
+//  top: inherit;
+//  width: 100%;
+//  font-size: $contentFontSize;
+//  font-weight: $contentFontWeight;
+//
+//  @media #{$xlarge} {
+//    font-size: $contentFontSizeXL;
+//  }
+//  @media #{$large} {
+//    font-size: $contentFontSizeLG;
+//  }
+//  @media #{$medium} {
+//    font-size: $contentFontSizeMD;
+//  }
+//  @media #{$small} {
+//    font-size: $contentFontSizeSM;
+//  }
+//}
+//contentItem{
+//  top: inherit;
+//  width: 100%;
+//  font-size: $contentFontSize;
+//  font-weight: $contentFontWeight;
+//
+//  @media #{$xlarge} {
+//    font-size: $contentFontSizeXL;
+//  }
+//  @media #{$large} {
+//    font-size: $contentFontSizeLG;
+//  }
+//  @media #{$medium} {
+//    font-size: $contentFontSizeMD;
+//  }
+//  @media #{$small} {
+//    font-size: $contentFontSizeSM;
+//  }
+//}
+
+
+
+
+@mixin linkText{
+  width: 100%;
+  font-size: $contentFontSize;
+  font-weight: $contentFontWeight;
+  cursor:pointer;
+
+  @media #{$xlarge} {
+    font-size: $contentFontSizeXL;
+  }
+  @media #{$large} {
+    font-size: $contentFontSizeLG;
+  }
+  @media #{$medium} {
+    font-size: $contentFontSizeMD;
+  }
+  @media #{$small} {
+    font-size: $contentFontSizeSM;
+  }  &:hover{
+  color:$hoverColor;
+}
+  &:visited{
+    color:$visitColor;
+  }
+}
