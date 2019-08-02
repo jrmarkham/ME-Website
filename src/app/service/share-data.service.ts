@@ -1,14 +1,12 @@
-import {Injectable, OnInit} from '@angular/core';
+import {Injectable} from '@angular/core';
 import {BehaviorSubject} from 'rxjs';
-import {Core} from '../models/core';
-
 @Injectable({
   providedIn: 'root'
 })
 
 @Injectable()
 export class ShareDataService {
-  private coreData = new BehaviorSubject<Core>(Core);
+  private coreData = new BehaviorSubject<object>(new Object());
   currentCoreData = this.coreData.asObservable();
   private page = new BehaviorSubject<string>('');
   currentPage = this.page.asObservable();
@@ -18,7 +16,7 @@ export class ShareDataService {
   constructor() {
   }
 
-  setCoreData(data: Core) {
+  setCoreData(data: object) {
     this.coreData.next(data);
   }
 

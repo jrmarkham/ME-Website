@@ -2,7 +2,6 @@ import {Injectable, OnInit} from '@angular/core';
 import {HttpClient, HttpErrorResponse, HttpParams} from '@angular/common/http';
 import {Observable, throwError} from 'rxjs';
 import {map, catchError} from 'rxjs/operators';
-import {Core} from '../models/core';
 
 @Injectable({
   providedIn: 'root'
@@ -10,11 +9,11 @@ import {Core} from '../models/core';
 
 export class PhpService {
   coreDataURL = '/data-php';
-  core: Core;
+  core: object;
 
   constructor(private http: HttpClient) {}
 
-  getCore(): Observable<Core> {
+  getCore(): Observable<object> {
     console.log('loading data ');
     return this.http.get(this.coreDataURL).pipe(
       map((res) => {

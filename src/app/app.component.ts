@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {Core} from './models/core';
 import {PhpService} from './service/php.service';
 import {ShareDataService} from './service/share-data.service';
 
@@ -9,7 +8,7 @@ import {ShareDataService} from './service/share-data.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  core: Core;
+  core: object;
 
   constructor(private phpService: PhpService, private data: ShareDataService) {
    // this.getCore();
@@ -22,7 +21,7 @@ export class AppComponent implements OnInit {
 
   getCore(): void {
     this.phpService.getCore().subscribe(
-      (res: Core) => {
+      (res: object) => {
         this.data.setCoreData(res);
       }, (err) => {
         console.log('ERROR: ', err.toString());

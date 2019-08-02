@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {Core} from '../models/core';
 import {ShareDataService} from '../service/share-data.service';
 
 @Component({
@@ -15,7 +14,7 @@ export class ContentComponent implements OnInit {
   NEWS_LINKS_NODE = 'news_links';
   NEWS_COUNT = 'news_count';
   NEWS_TYPE = 'news';
-  core: Core;
+  core: object;
   page: string;
   newsIdx: number;
   contents: Array<object>;
