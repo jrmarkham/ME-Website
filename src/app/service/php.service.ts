@@ -14,7 +14,7 @@ export class PhpService {
   constructor(private http: HttpClient) {}
 
   getCore(): Observable<object> {
-    console.log('loading data ');
+    console.log('loading dataObject ');
     return this.http.get(this.coreDataURL).pipe(
       map((res) => {
         this.core = res;

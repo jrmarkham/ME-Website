@@ -21,13 +21,13 @@ export class ContentComponent implements OnInit {
 
   ngOnInit() {
 
-    this.data.currentCoreData.subscribe(coreData => this.core = coreData);
+    this.data.currentData.subscribe(coreData => this.core = coreData);
     this.data.currentNewsIdx.subscribe(idx => this.newsIdx = idx);
     this.data.currentPage.subscribe(pageData => {
       this.page = pageData;
       this.page === this.NEWS_TYPE ? this.buildNewsContent() : this.buildContent();
     });
-    console.log('header core ', this.core);
+    console.log('header dataObject ', this.core);
   }
 
   buildContent() {

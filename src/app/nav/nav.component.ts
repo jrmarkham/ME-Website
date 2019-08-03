@@ -13,7 +13,7 @@ export class NavComponent implements OnInit {
 
   ngOnInit() {
     const NAV = 'nav';
-    this.data.currentCoreData.subscribe(coreData => {
+    this.data.currentData.subscribe(coreData => {
       this.nav = coreData[NAV];
       this.core = coreData;
     });

@@ -1,12 +1,13 @@
 <?php
 /**
- * Returns the data.
+ * Returns the dataObject.
  */
 require 'database.php';
 
 
 function get_core_data($con, $query){
 $result = mysqli_query($con, $query);
+  $data = array();
     while ($row = mysqli_fetch_array($result)) {
       $data = array(
         'title' => $row['title'],
@@ -82,7 +83,7 @@ function get_news_data($con, $query){
     );
   }
   $new_links = 'news_links';
-  $data[$new_links] = $links;
+  $data[$new_links] = array_reverse($links);
   $news_count = 'news_count';
   $data[$news_count] = $count;
   $other_news = 'other_news';

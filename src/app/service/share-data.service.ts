@@ -6,8 +6,8 @@ import {BehaviorSubject} from 'rxjs';
 
 @Injectable()
 export class ShareDataService {
-  private coreData = new BehaviorSubject<object>(new Object());
-  currentCoreData = this.coreData.asObservable();
+  private data = new BehaviorSubject<object>(new Object());
+  currentData = this.data.asObservable();
   private page = new BehaviorSubject<string>('');
   currentPage = this.page.asObservable();
   private newsIdx = new BehaviorSubject<number>(1);
@@ -17,7 +17,7 @@ export class ShareDataService {
   }
 
   setCoreData(data: object) {
-    this.coreData.next(data);
+    this.data.next(data);
   }
 
   setPageData(data: string) {

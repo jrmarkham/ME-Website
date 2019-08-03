@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
    // this.getCore();
   }
 
-  // run thru data loads
+  // run thru dataObject loads
   ngOnInit() {
       this.getCore();
   }

@@ -27,6 +27,7 @@
   font-size: $menuFontSize;
   font-weight: $menuFontWeight;
   cursor: pointer;
+  text-transform: uppercase;
   @media #{$xlarge} {
     font-size: $menuFontSizeXL;
   }
@@ -40,7 +41,8 @@
     font-size: $menuFontSizeMD;
   }
   @media #{$small} {
-    //margin-left: 2px;
+    margin-left: 2px;
+    text-transform: lowercase;
     width: 100%;
     font-size: $contentFontSizeSM;
   }

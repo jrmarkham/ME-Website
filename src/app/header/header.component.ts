@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     const TITLE = 'title';
     const SUBTITLE = 'subtitle';
-    this.data.currentCoreData.subscribe(coreData => {
+    this.data.currentData.subscribe(coreData => {
       this.title = coreData[TITLE];
       this.subtitle = coreData[SUBTITLE];
     });

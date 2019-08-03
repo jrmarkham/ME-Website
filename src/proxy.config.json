@@ -1,6 +1,6 @@
 {
   "/data-php": {
-    "target":"http://localhost:8888/read/index.php",
+    "target":"http://localhost:8888/index.php",
     "secure": false,
     "logLevel":"debug",
     "changeOrigin": true
