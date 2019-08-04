@@ -38,30 +38,30 @@
 
 
 
-
-.newsLink{
-  font-size: $contentFontSize;
-  font-weight: $menuFontWeight;
-  cursor: pointer;
-  @media #{$xLarge} {
-    font-size: $contentFontSizeXL;
-  }
-  @media #{$large} {
-    font-size: $contentFontSizeLG;
-  }
-  @media #{$medium} {
-    font-size: $contentFontSizeMD;
-  }
-  @media #{$small} {
-    font-size: $contentFontSizeSM;
-  }  &:hover{
-  color:$hoverColor;
-}
-  &:visited{
-    color:$visitColor;
-  }
-}
 //
+//.newsLink{
+//  font-size: $contentFontSize;
+//  font-weight: $menuFontWeight;
+//  cursor: pointer;
+//  @media #{$xLarge} {
+//    font-size: $contentFontSizeXL;
+//  }
+//  @media #{$large} {
+//    font-size: $contentFontSizeLG;
+//  }
+//  @media #{$medium} {
+//    font-size: $contentFontSizeMD;
+//  }
+//  @media #{$small} {
+//    font-size: $contentFontSizeSM;
+//  }  &:hover{
+//  color:$hoverColor;
+//}
+//  &:visited{
+//    color:$visitColor;
+//  }
+//}
+////
 //div.content{
 //  overflow-y: scroll;
 //  height: 80%;

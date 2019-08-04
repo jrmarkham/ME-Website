@@ -27,7 +27,7 @@
     font-size: $contentFontSizeMD;
   }
   @media #{$small} {
-    top: 95px;
+    top: 100px;
     margin-left: 5%;
     margin-right:5%;
     width: 90%;
@@ -224,29 +224,29 @@ a{
 //}
 
 
-
-
-@mixin linkText{
-  width: 100%;
-  font-size: $contentFontSize;
-  font-weight: $contentFontWeight;
-  cursor:pointer;
-
-  @media #{$xLarge} {
-    font-size: $contentFontSizeXL;
-  }
-  @media #{$large} {
-    font-size: $contentFontSizeLG;
-  }
-  @media #{$medium} {
-    font-size: $contentFontSizeMD;
-  }
-  @media #{$small} {
-    font-size: $contentFontSizeSM;
-  }  &:hover{
-  color:$hoverColor;
-}
-  &:visited{
-    color:$visitColor;
-  }
-}
+//
+//
+//@mixin linkText{
+//  width: 100%;
+//  font-size: $contentFontSize;
+//  font-weight: $contentFontWeight;
+//  cursor:pointer;
+//
+//  @media #{$xLarge} {
+//    font-size: $contentFontSizeXL;
+//  }
+//  @media #{$large} {
+//    font-size: $contentFontSizeLG;
+//  }
+//  @media #{$medium} {
+//    font-size: $contentFontSizeMD;
+//  }
+//  @media #{$small} {
+//    font-size: $contentFontSizeSM;
+//  }  &:hover{
+//  color:$hoverColor;
+//}
+//  &:visited{
+//    color:$visitColor;
+//  }
+//}
