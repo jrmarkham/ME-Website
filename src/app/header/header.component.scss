@@ -7,22 +7,14 @@
   width: 60%;
   height:150px;
   position: absolute;
-  text-transform: uppercase;
-  font-weight: $bigHeaderFontWeight;
-    font-size: $bigHeaderFontSizeXL;
+  background-image: url("../../assets/images/me.png");
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
 
-  @media #{$large} {
-    font-size: $bigHeaderFontSizeLG;
-  }
-  @media #{$medium} {
-    margin-left: 10%;
-    margin-right:10%;
-    width: 80%;
-    font-size: $contentFontSizeMD;
-  }
   @media #{$small} {
-    height:50px;
-    height:5%;
+    top: 0px;
+    height:75px;
     margin-left: 5%;
     margin-right:5%;
     width: 90%;
@@ -30,28 +22,16 @@
   }
 }
 
-.imageIcon{
-  position: absolute;
-  width: 35%;
-  height: 130px;
-  top: 5px;
-  left: 5%;
-  background-image: url("../../assets/images/me.png");
-  background-position: left bottom;
-  background-repeat: no-repeat;
-  background-size: contain;
-  @media #{$small} {
-    display: none;
-
-  }
-}
-
-.title{
-  position: absolute;
-  right: 5%;
-  bottom: 10px;
-  @media #{$small} {
-    left: 0;
-  }
-}
+//.imageIcon{
+//  position: absolute;
+//  width: 35%;
+//  height: 130px;
+//  top: 5px;
+//  left: 5%;
+//  background-image: url("../../assets/images/me.png");
+//  background-position: left bottom;
+//  background-repeat: no-repeat;
+//  background-size: contain;
+//
+//}
 

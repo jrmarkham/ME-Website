@@ -8,12 +8,8 @@
 
   <div *ngSwitchCase="'text'" class="contentText"> {{item.content}} </div>
   <div *ngSwitchCase="'news_link'" class="contentLink" (click)="updateNewPage(item.id)">{{item.content}}</div>
-
   <div *ngSwitchCase="'link_name_short'" class="contentLink"><a href="{{item.link}}" target="_blank">{{item.content}}</a></div>
-
-
   <div *ngSwitchCase="'link_name'" class="contentText"><span class="contentLeft">{{item.content}}:</span><span class="contentRightLink"><a href="{{item.link}}" target="_blank">{{item.content}}</a></span></div>
-
   <div *ngSwitchCase="'link'" class="contentText"><span class="contentLeft">{{item.content}}:</span><span class="contentRightLink"><a href="{{item.link}}" target="_blank">{{item.link}}</a></span></div>
 
    <div *ngSwitchCase="'email'" class="contentText"><span class="contentLeft">{{item.content}}:</span><span class="contentRightLink"><a href="mailto: {{item.link}}" target="_blank">{{item.link}}</a></span></div>
@@ -23,36 +19,4 @@
 
 </div>
   <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
-
 </div>
-
-<!-- //  *ngFor="let item of dataObject.nav; let last = last;"-->
-<!--  -->
-<!--  // ="let item of dataObject.nav; let last = last;-->
-
-
-
-
-<!--  contents.forEach((elem) => {-->
-<!--  switch (elem.type) {-->
-<!--  case 'para':-->
-<!--  this.content += `<p>${elem.content}</p>`;-->
-<!--  break;-->
-<!--  case 'text':-->
-<!--  this.content += elem.content;-->
-<!--  break;-->
-<!--  case 'link':-->
-<!--  this.content += elem.content;-->
-<!--  break;-->
-<!--  case 'email':-->
-<!--  this.content += elem.content;-->
-<!--  break;-->
-<!--  case 'break':-->
-<!--  this.content += `<br>`;-->
-<!--  break;-->
-<!--  case 'line':-->
-<!--  this.content += `<hr>`;-->
-<!--  break;-->
-<!--  }-->
-<!--  console.log(elem.content);-->
-<!--  });-->

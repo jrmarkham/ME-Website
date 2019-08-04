@@ -12,7 +12,7 @@
     font-size: $contentFontSizeMD;
   }
   @media #{$small} {
-    top: 55px;
+    top: 60px;
     margin-left: 5%;
     margin-right: 5%;
     width: 90%;
@@ -28,7 +28,7 @@
   font-weight: $menuFontWeight;
   cursor: pointer;
   text-transform: uppercase;
-  @media #{$xlarge} {
+  @media #{$xLarge} {
     font-size: $menuFontSizeXL;
   }
   @media #{$large} {
@@ -62,7 +62,7 @@
   margin-left: 5px;
   font-size: $menuFontSize;
   font-weight: $menuFontWeight;
-  @media #{$xlarge} {
+  @media #{$xLarge} {
     font-size: $menuFontSizeXL;
   }
   @media #{$large} {

@@ -43,7 +43,7 @@
   font-size: $contentFontSize;
   font-weight: $menuFontWeight;
   cursor: pointer;
-  @media #{$xlarge} {
+  @media #{$xLarge} {
     font-size: $contentFontSizeXL;
   }
   @media #{$large} {

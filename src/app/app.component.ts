@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, enableProdMode, OnInit} from '@angular/core';
 import {PhpService} from './service/php.service';
 import {ShareDataService} from './service/share-data.service';
 
@@ -8,18 +8,12 @@ import {ShareDataService} from './service/share-data.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  core: object;
 
-  constructor(private phpService: PhpService, private data: ShareDataService) {
-   // this.getCore();
-  }
+  constructor(private phpService: PhpService, private data: ShareDataService) { }
 
   // run thru dataObject loads
   ngOnInit() {
-      this.getCore();
-  }
 
-  getCore(): void {
     this.phpService.getCore().subscribe(
       (res: object) => {
         this.data.setCoreData(res);

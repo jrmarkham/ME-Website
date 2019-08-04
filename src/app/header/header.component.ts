@@ -1,5 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {ShareDataService} from '../service/share-data.service';
+import {Component} from '@angular/core';
 
 
 @Component({
@@ -7,18 +6,4 @@ import {ShareDataService} from '../service/share-data.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
-  title: string;
-  subtitle: string;
-  constructor(private data: ShareDataService) {}
-
-  ngOnInit() {
-    const TITLE = 'title';
-    const SUBTITLE = 'subtitle';
-    this.data.currentData.subscribe(coreData => {
-      this.title = coreData[TITLE];
-      this.subtitle = coreData[SUBTITLE];
-    });
-  }
-
-}
+export class HeaderComponent {}

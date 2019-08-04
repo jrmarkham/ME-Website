@@ -5,17 +5,17 @@
 require 'database.php';
 
 
-function get_core_data($con, $query){
-$result = mysqli_query($con, $query);
-  $data = array();
-    while ($row = mysqli_fetch_array($result)) {
-      $data = array(
-        'title' => $row['title'],
-        'subtitle' => $row['subtitle']
-      );
-    }
-     return $data;
-}
+//function get_core_data($con, $query){
+//$result = mysqli_query($con, $query);
+//  $data = array();
+//    while ($row = mysqli_fetch_array($result)) {
+//      $data = array(
+//        'title' => $row['title'],
+//        'subtitle' => $row['subtitle']
+//      );
+//    }
+//     return $data;
+//}
 
 function get_nav_data($con, $query){
   $result = mysqli_query($con, $query);
@@ -59,6 +59,29 @@ function get_other_news(){
 }
 
 
+function get_final_news_link(){
+  $data = array();
+  $data[] = array(
+    'type' => 'break',
+    'content' => '',
+    'link' => ''
+  );
+  $data[] = array(
+    'type' => 'break',
+    'content' => '',
+    'link' => ''
+  );
+  $data[] = array(
+    'type' => 'link_name_short',
+    'content' => 'Sign Up for News Updates',
+    'link' => 'https://seu2.cleverreach.com/f/176697-173570/'
+  );
+
+  return $data;
+}
+
+
+
 function get_news_data($con, $query){
   $result = mysqli_query($con, $query);
   $data = array();
@@ -88,15 +111,13 @@ function get_news_data($con, $query){
   $data[$news_count] = $count;
   $other_news = 'other_news';
   $other_news_data =  get_other_news();
+  $final_link = 'final_link';
+  $data[$final_link] = get_final_news_link();
   $data[$other_news] = $other_news_data;
 
   return $data;
 }
 
-
-// GET CORE DATA
-$query_core = "SELECT * FROM core_me";
-$core_data = get_core_data($con, $query_core);
 
 // GET NAV
 $query_nav = "SELECT * FROM nav_me";
