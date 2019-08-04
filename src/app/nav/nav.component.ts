@@ -43,7 +43,13 @@ export class NavComponent implements OnInit {
 
 
     //  check url for route
-    const item = window.location.pathname.replace('/', '');
+    const item = window.location.href.split('?page=')[1];
+
+    if (item === undefined) {
+      return;
+    }
+    console.log('item', item);
+
     const itemParts = item.split(':');
     const pageData = itemParts[0];
     let newsDataNum = itemParts[1] === undefined ? this.newsCount : Number(itemParts[1]);
@@ -51,7 +57,7 @@ export class NavComponent implements OnInit {
     if (!this.nav.includes(pageData)) {
       return;
     }
-    let pageRoute = `/${pageData}`;
+    let pageRoute = `?page=${pageData}`;
     // check for news
     if (this.NEWS === pageData) {
       if (newsDataNum < 0 || newsDataNum > this.newsCount) {
@@ -59,7 +65,7 @@ export class NavComponent implements OnInit {
       }
 
       this.data.setNewsData(newsDataNum - 1);
-      pageRoute = `/${pageData}:${newsDataNum}`;
+      pageRoute = `?page=${pageData}:${newsDataNum}`;
     }
 
     this.router.navigateByUrl(pageRoute).then(ref => {
@@ -69,11 +75,11 @@ export class NavComponent implements OnInit {
 
 
   updatePage(pageData: string) {
-    let pageRoute = `/${pageData}`;
+    let pageRoute = `?page=${pageData}`;
     // check for news
     if (this.NEWS === pageData) {
       this.data.setNewsData(this.newsCount - 1);
-      pageRoute = `/${pageData}:${this.newsCount}`;
+      pageRoute = `?page=${pageData}:${this.newsCount}`;
     }
 
     this.router.navigateByUrl(pageRoute).then(ref => {

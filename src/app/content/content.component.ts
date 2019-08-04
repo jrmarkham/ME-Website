@@ -47,7 +47,7 @@ export class ContentComponent implements OnInit {
   updateNewPage(newsIdx: number) {
     if (this.newsIdx === (newsIdx - 1)) {return; }
     this.data.setNewsData(newsIdx - 1);
-    const pageRoute = `/${this.page}:${newsIdx}`;
+    const pageRoute = `?page=${this.page}:${newsIdx}`;
     this.router.navigateByUrl(pageRoute).then(ref => {
       this.buildNewsContent();
     });
@@ -55,8 +55,6 @@ export class ContentComponent implements OnInit {
  }
 
 buildNewsContent() {
-     console.log(' this.newsIdx ', this.newsIdx);
-
      this.contents = [];
      this.contents.push(...this.core[this.page][this.newsIdx].content);
      if (this.core[this.page][this.NEWS_COUNT] > 1) {
@@ -65,8 +63,6 @@ buildNewsContent() {
     }
 
      this.contents.push(...this.core[this.page][this.NEWS_FINAL_LINK_NODE]);
-     console.log(' this.contents length ', this.contents.length);
-     console.log(' this.contents ', this.contents);
 
   }
 }
