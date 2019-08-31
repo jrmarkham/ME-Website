@@ -21,7 +21,12 @@ function get_nav_data($con, $query){
   $result = mysqli_query($con, $query);
   $data = array();
   while ($row = mysqli_fetch_array($result)) {
-    $data[] = $row['nav_item'];
+
+    $data[] = array(
+      'item' =>  $row['nav_item'],
+      'name' => $row['nav_name']
+    ) ;
+
   }
   return $data;
 }
@@ -126,17 +131,20 @@ $core_data['nav']=$nav_data;
 
 // CONTENT
 foreach ($nav_data as $item){
-  if('news'== $item){
+  $table = $item['item'];
+  $name = $item['name'];
+  if('news'== $name){
     /// do news and news content
-    $query = "SELECT * FROM $item";
+
+    $query = "SELECT * FROM $table";
     $news_data = get_news_data($con, $query);
-    $core_data[$item] = $news_data;
+    $core_data[$name] = $news_data;
     continue;
   }
 
-  $query = "SELECT * FROM $item";
+  $query = "SELECT * FROM $table";
   $con_data = get_content_data($con, $query);
-  $core_data[$item]= $con_data;
+  $core_data[$name]= $con_data;
 }
 
 

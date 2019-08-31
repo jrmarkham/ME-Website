@@ -60,6 +60,14 @@ a{
   height: auto;
   text-align: left;
   cursor: pointer;
+  color: $linkColor;
+  &:hover {
+    color: $hoverColor;
+  }
+
+  &:visited {
+    color: $visitColor;
+  }
 }
 
 
@@ -104,149 +112,3 @@ a{
     color: $visitColor;
   }
 }
-
-//
-//.contentPara{
-//  top: inherit;
-//  width: 100%;
-//  font-size: $contentFontSize;
-//  font-weight: $contentFontWeight;
-//
-//  @media #{$xlarge} {
-//    font-size: $contentFontSizeXL;
-//  }
-//  @media #{$large} {
-//    font-size: $contentFontSizeLG;
-//  }
-//  @media #{$medium} {
-//    font-size: $contentFontSizeMD;
-//  }
-//  @media #{$small} {
-//    font-size: $contentFontSizeSM;
-//  }
-//}
-
-
-//contentItem{
-//  top: inherit;
-//  width: 100%;
-//  font-size: $contentFontSize;
-//  font-weight: $contentFontWeight;
-//
-//  @media #{$xlarge} {
-//    font-size: $contentFontSizeXL;
-//  }
-//  @media #{$large} {
-//    font-size: $contentFontSizeLG;
-//  }
-//  @media #{$medium} {
-//    font-size: $contentFontSizeMD;
-//  }
-//  @media #{$small} {
-//    font-size: $contentFontSizeSM;
-//  }
-//}
-//contentItem{
-//  top: inherit;
-//  width: 100%;
-//  font-size: $contentFontSize;
-//  font-weight: $contentFontWeight;
-//
-//  @media #{$xlarge} {
-//    font-size: $contentFontSizeXL;
-//  }
-//  @media #{$large} {
-//    font-size: $contentFontSizeLG;
-//  }
-//  @media #{$medium} {
-//    font-size: $contentFontSizeMD;
-//  }
-//  @media #{$small} {
-//    font-size: $contentFontSizeSM;
-//  }
-//}
-//contentItem{
-//  top: inherit;
-//  width: 100%;
-//  font-size: $contentFontSize;
-//  font-weight: $contentFontWeight;
-//
-//  @media #{$xlarge} {
-//    font-size: $contentFontSizeXL;
-//  }
-//  @media #{$large} {
-//    font-size: $contentFontSizeLG;
-//  }
-//  @media #{$medium} {
-//    font-size: $contentFontSizeMD;
-//  }
-//  @media #{$small} {
-//    font-size: $contentFontSizeSM;
-//  }
-//}
-//contentItem{
-//  top: inherit;
-//  width: 100%;
-//  font-size: $contentFontSize;
-//  font-weight: $contentFontWeight;
-//
-//  @media #{$xlarge} {
-//    font-size: $contentFontSizeXL;
-//  }
-//  @media #{$large} {
-//    font-size: $contentFontSizeLG;
-//  }
-//  @media #{$medium} {
-//    font-size: $contentFontSizeMD;
-//  }
-//  @media #{$small} {
-//    font-size: $contentFontSizeSM;
-//  }
-//}
-//contentItem{
-//  top: inherit;
-//  width: 100%;
-//  font-size: $contentFontSize;
-//  font-weight: $contentFontWeight;
-//
-//  @media #{$xlarge} {
-//    font-size: $contentFontSizeXL;
-//  }
-//  @media #{$large} {
-//    font-size: $contentFontSizeLG;
-//  }
-//  @media #{$medium} {
-//    font-size: $contentFontSizeMD;
-//  }
-//  @media #{$small} {
-//    font-size: $contentFontSizeSM;
-//  }
-//}
-
-
-//
-//
-//@mixin linkText{
-//  width: 100%;
-//  font-size: $contentFontSize;
-//  font-weight: $contentFontWeight;
-//  cursor:pointer;
-//
-//  @media #{$xLarge} {
-//    font-size: $contentFontSizeXL;
-//  }
-//  @media #{$large} {
-//    font-size: $contentFontSizeLG;
-//  }
-//  @media #{$medium} {
-//    font-size: $contentFontSizeMD;
-//  }
-//  @media #{$small} {
-//    font-size: $contentFontSizeSM;
-//  }  &:hover{
-//  color:$hoverColor;
-//}
-//  &:visited{
-//    color:$visitColor;
-//  }
-//}
