@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ShareDataService} from '../service/share-data.service';
-import {Router} from '@angular/router';
-import {Subscription} from 'rxjs';
+import {Event as NavigationEvent, NavigationStart, Router} from '@angular/router';
+import {filter} from 'rxjs/operators';
 
 @Component({
   selector: 'app-nav',
@@ -16,6 +16,22 @@ export class NavComponent implements OnInit {
   NEWS = 'news';
 
   constructor(private data: ShareDataService, private router: Router) {
+
+    // router.events.subscribe() => this.browserNavigation(event);
+    router.events
+      .pipe(
+        filter(
+        (event: NavigationEvent) => {
+          return (event instanceof NavigationStart);
+        }
+        )
+      ).subscribe(
+      (event: NavigationStart) => {
+        if (event.navigationTrigger === 'popstate') {
+          this.routePage();
+        }
+      }
+    );
   }
 
   ngOnInit() {
@@ -28,9 +44,8 @@ export class NavComponent implements OnInit {
     this.nav = Array();
     // tslint:disable-next-line:forin
     for (const key in this.core[NAV]) {
-      this.nav.push(this.core[NAV][key]);
+      this.nav.push(this.core[NAV][key].name);
     }
-
 
     const NEWS_COUNT = 'news_count';
     // tslint:disable-next-line:forin
@@ -40,8 +55,9 @@ export class NavComponent implements OnInit {
         break;
       }
     }
-
-
+    this.routePage();
+  }
+  routePage() {
     //  check url for route
     const item = window.location.href.split('?page=')[1];
 
@@ -55,8 +71,10 @@ export class NavComponent implements OnInit {
     let newsDataNum = itemParts[1] === undefined ? this.newsCount : Number(itemParts[1]);
 
     if (!this.nav.includes(pageData)) {
+      console.log('!this.nav.includes(pageData)');
       return;
     }
+
     let pageRoute = `?page=${pageData}`;
     // check for news
     if (this.NEWS === pageData) {
@@ -69,6 +87,7 @@ export class NavComponent implements OnInit {
     }
 
     this.router.navigateByUrl(pageRoute).then(ref => {
+      console.log('set page data under navigate by url');
       this.data.setPageData(pageData);
     });
   }
@@ -86,4 +105,5 @@ export class NavComponent implements OnInit {
       this.data.setPageData(pageData);
     });
   }
+
 }

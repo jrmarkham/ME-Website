@@ -24,8 +24,9 @@ export class ContentComponent implements OnInit {
     this.data.currentData.subscribe(coreData => this.setupData(coreData));
     this.data.currentNewsIdx.subscribe(idx => this.newsIdx = idx);
     this.data.currentPage.subscribe(pageData => {
-      this.page = pageData;
-      this.page === this.NEWS_TYPE ? this.buildNewsContent() : this.buildContent();
+     console.log('this.data.currentPage.subscribe ', pageData);
+     this.page = pageData;
+     this.page === this.NEWS_TYPE ? this.buildNewsContent() : this.buildContent();
 
     });
   }
@@ -36,7 +37,7 @@ export class ContentComponent implements OnInit {
 
   buildContent() {
 
-    console.log('build content');
+    console.log('build content ', this.page);
 
     this.contents = [];
     this.contents.push(...this.core[this.page]);
