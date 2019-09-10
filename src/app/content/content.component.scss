@@ -44,6 +44,25 @@
   text-align: left;
 }
 
+
+.contentHeader{
+  position: relative;
+  height: auto;
+  width: 90%;
+  text-align: left;
+  font-weight: bold;
+  font-size: $menuFontSizeXL;
+  @media #{$large} {
+    font-size: $menuFontSizeLG;
+  }
+  @media #{$medium} {
+    font-size: $menuFontSizeMD;
+  }
+  @media #{$small} {
+    font-size: $menuFontSizeSM;
+  }
+}
+
 a{
   color: $linkColor;
   &:hover {

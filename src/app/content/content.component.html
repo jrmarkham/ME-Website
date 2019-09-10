@@ -5,6 +5,7 @@
 
 <div *ngFor="let item of contents" [ngSwitch]="item.type">
   <div *ngSwitchCase="'text'" class="contentText"> {{item.content}} </div>
+  <div *ngSwitchCase="'text_header'" class="contentHeader"> {{item.content}} </div>
   <div *ngSwitchCase="'news_link'" class="contentLink" (click)="updateNewPage(item.id)">{{item.content}}</div>
   <div *ngSwitchCase="'link_name_short'" class="contentLink"><a href="{{item.link}}" target="_blank">{{item.content}}</a></div>
   <div *ngSwitchCase="'link_name'" class="contentText"><span class="contentLeft">{{item.content}}:</span><span class="contentRightLink"><a href="{{item.link}}" target="_blank">{{item.content}}</a></span></div>

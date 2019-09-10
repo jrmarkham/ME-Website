@@ -62,9 +62,9 @@ export class NavComponent implements OnInit {
     const item = window.location.href.split('?page=')[1];
 
     if (item === undefined) {
+      this.data.setPageData('about');
       return;
     }
-    console.log('item', item);
 
     const itemParts = item.split(':');
     const pageData = itemParts[0];
