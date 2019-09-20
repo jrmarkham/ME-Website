@@ -62,7 +62,6 @@ export class NavComponent implements OnInit {
     const item = window.location.href.split('?page=')[1];
 
     if (item === undefined) {
-      this.data.setPageData('about');
       return;
     }
 
@@ -91,7 +90,6 @@ export class NavComponent implements OnInit {
       this.data.setPageData(pageData);
     });
   }
-
 
   updatePage(pageData: string) {
     let pageRoute = `?page=${pageData}`;
